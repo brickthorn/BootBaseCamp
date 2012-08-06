@@ -1,0 +1,17 @@
+
+<p>
+  <b><%= @project.title %></b>
+
+  <% if @project.private  %>
+    <i>(Private)</i>
+  <% else  %>
+    <i>(Public)</i>
+  <% end %>
+
+
+ <%= link_to "Edit", edit_project_path(@project.id) %>
+
+
+
+
+</p>

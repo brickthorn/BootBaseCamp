@@ -1,4 +1,13 @@
 Basecamp::Application.routes.draw do
+
+  match "/home" => 'splash_pages#home'
+
+  root :to => 'projects#index'
+
+  resources :projects
+
+  devise_for :users
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

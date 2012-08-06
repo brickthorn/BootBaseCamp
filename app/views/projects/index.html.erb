@@ -1,0 +1,13 @@
+<p>
+  <h2>Projects List</h2> <br />
+  <table>
+    <% @projects.each_with_index do |project, i| %>
+    <tr><td> <%= i+1 %>. </td>
+
+      <td> <%= link_to project.title, project_path(project.id) %></td>
+    </tr>
+  <% end %>
+  </table>
+</p>
+
+<%= link_to "Add Project", new_project_path %>
